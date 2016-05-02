@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  post 'my_url_shortener/create'
+  post '/my_url_shortener/create' => 'my_url_shortener#create'
   get 'my_url_shortener/create'
   get 'my_url_shortener/show'
   get '/:id' => 'my_url_shortener#redirect_to_user_site'
 
-  root 'my_url_shortener#show'
+  root 'my_url_shortener#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -8,12 +8,16 @@ class MyUrlShortenerController < ApplicationController
     redirect_to MyUrlShortenerModel.find(params[:id])[:user_url]
   end
 
+  def index
+
+  end
+
   def create
     p "*" * 50
     p MyUrlShortenerModel.new(my_validated_params).save
     p "*" * 50
 
-    redirect_to '/'
+    redirect_to my_url_shortener_show_path
   end
 
   def show

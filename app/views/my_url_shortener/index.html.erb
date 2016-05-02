@@ -1,0 +1,6 @@
+<h1>Mike's URL Shortener</h1>
+<p>Type in a web URL and press ENTER to receive a shortened URL</p>
+
+<%= form_tag "my_url_shortener/create" do %>
+  <%= text_field_tag "user_url" %>
+<% end %>
