@@ -1,0 +1,14 @@
+<h1>Mike's URL Shortener</h1>
+<p>Type in a web URL and press ENTER to receive a shortened URL</p>
+
+<%= form_tag "my_url_shortener/create" do %>
+  <%= text_field_tag "user_url" %>
+<% end %>
+
+<br><br>
+<h2>Shortened URL</h2>
+<div>
+  <%= root_url + MyUrlShortenerModel.all.last.get_new_url_id.to_s %>
+</div><br>
+<h2>Given URL</h2>
+<div><%= MyUrlShortenerModel.all.last.get_redirect_to_url %></div>

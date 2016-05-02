@@ -1,0 +1,2 @@
+module MyUrlShortenerHelper
+end
